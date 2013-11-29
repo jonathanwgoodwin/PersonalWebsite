@@ -1,53 +1,80 @@
 <html>
     <head>
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css'>
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+        <script src='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js'></script>
+        <!-- links -->
         <link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,700' rel='stylesheet' type='text/css'>
+        <!-- jwg -->
+        <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+        <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
         <style>
             p {
-                font-size:38px;
-                color:#C0C0C0;
+                font-size: 30px;
             }
-            a {
-                font-family:Signika Negative;
+            li {
+                font-size: 20px;
             }
-            .bodyImage {
-                background-image:url('cogs.jpg');
-                width:100%;
-                height:100%;
-                -webkit-filter:blur(4px);
-            }
-            .bgImage{
-                background-image:url('http://www.mcdonalds.com/content/dam/McDonalds/item/mcdonalds-Big-N-Tasty.png');
-                -webkit-filter: blur(5px);
-            }
-            .content{z-index:10;position:relative;color:#fff}
 
+            a {
+                font-family: Signika Negative;
+            }
+            body {
+                background-color: white;
+            }
+            h1 {
+                // color: #686868;
+                font-size: 50px;
+                font-family: 'Orbitron', sans-serif;
+            }
+            .fa {
+                margin-right: 10px;
+            }
+            .credit {
+                font-size: 13px;
+                position: absolute;
+                margin-left: 40%;
+                bottom: 0px;
+            }
         </style>
     </head>
     <body>
-        <div class="bodyImage">
-        </div>
-        <div class="container">
-            <div class="page-header">
-                <h1>
-                    JwG 
-                    <small> GitHub </small>
-                    <small> LinkedIn </small>
-                    <small> Twitter </small>
-                </h1>
-            </div>
-            <div class="container">
-                <p>
-                I'm an IS Major at <a href="http://www.ccs.neu.edu/">Northeastern University</a> on <a href="http://www.ccs.neu.edu/co-op/">Co-op</a> at <a href="http://www.dataxu.com/">DataXu</a>.
-                I love automation, optimization, great food and electronic music.
-                <p>
-                At DataXu I've had the oportunity to automate most our code deployemnt, and am currently building out centralized logging to enhance our platform monitoring.
-                <p>
-                At Northeastern I'm a Project Coordinator, Teacher and Developer with the <a href="http://crew.ccs.neu.edu">Undergraduate Experimental Systems Group</a>. I also am a board chair for the <a href="http://www.northeastern.edu/osccr/">Office of Student Conduct and Conflict Resoulution </a>.
-                </p>
+        <div class='container' >
+            <div class='col-md-3'>
+                <h1>JwG</h1>
             </div>
         </div>
+        <div class='container' style='margin-top:5%;'>
+            <div class='row'>
+                <div class='col-md-3'>
+                    <ul>
+                        <li>
+                        <i class='fa fa-book'></i><a href='education.html'>Education</a>
+                        </li>
+                        <li>
+                        <i class='fa fa-group'></i><a href='community.html'>Community</a>
+                        </li>
+                        <li>
+                        <i class="fa fa-github"></i><a href='#'>GitHub</a>
+                        </li>
+                        <li>
+                        <i class="fa fa-linkedin"></i><a href='#'>LinkedIn</a>
+                        </li>
+
+                        <li>
+                        <i class="fa fa-twitter"></i><a href='#'>Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='col-md-8'>
+                    <p>
+                    I am Jonathan Goodwin, an Information Science Major at <a href='http://www.ccs.neu.edu/'>Northeastern University</a> currently on <a href='http://www.ccs.neu.edu/co-op/'>Co-op</a> at <a href='http://www.dataxu.com/'>DataXu</a>. <br>
+                    Some of my favorite things are: automation, operations, great food and electronic music.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class='credit'>Icons used <a href='http://fontawesome.io'>http://fontawesome.io</a> Styles used <a href='http://getbootstrap.com'>http://getbootstrap.com</a></p>
     </body>
 </html>
