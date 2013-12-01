@@ -1,17 +1,22 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google jquery -->
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+        <!-- bootstrap 3 -->
+        <script src='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js'></script>
         <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
         <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css'>
-        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
-        <script src='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js'></script>
         <!-- links -->
         <link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,700' rel='stylesheet' type='text/css'>
         <!-- jwg -->
         <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
+        <!-- fontawesome -->
         <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
         <style>
             p {
-                font-size: 30px;
+                font-size: 20px;
             }
             li {
                 font-size: 20px;
@@ -29,7 +34,11 @@
                 font-family: 'Orbitron', sans-serif;
             }
             .fa {
-                margin-right: 10px;
+                margin-right: 6px;
+            }
+            .social .fa {
+                margin-right: 5px;
+                margin-left: 20px;
             }
             .credit {
                 font-size: 13px;
@@ -37,44 +46,89 @@
                 margin-left: 40%;
                 bottom: 0px;
             }
+            .social {
+                font-size: 20px;
+            }
+            img {
+                margin-right: 15px;
+            }
+            .nav {
+                font-size: 20px;
+                margin-left: 15px;
+                margin-bottom: 10px;
+            }
+            #reveal {
+                display: none;
+            }
+            @media only screen and (max-width: 1175px) {
+                #hide{
+                    display: none;
+                }
+                #reveal{
+                    display: block;
+                }
+            }
+            #content{
+                margin-left: 30px;
+                margin-right: 30px;
+            }
         </style>
+        <script>
+            function getContent(){
+                loc=window.location.href.split('/').pop().replace('\#','');
+                console.log(loc);
+                if(loc == ''){
+                    loc='home';
+                }
+                if(loc == 'home'){
+                    getHtml('home');
+                    }else{
+                    getHtml(loc);
+                }
+            }
+            function getHtml(file){
+                $.get( file, function( data ) {
+                    $( "#content" ).html( data );
+                });
+            }
+            $(document).ready(getContent());
+        </script>
+
     </head>
     <body>
         <div class='container' >
-            <div class='col-md-3'>
-                <h1>JwG</h1>
+            <div>
+                <h1 class='col-md-3' id='hide'>JwG</h1>
+                <h1 class='col-xs text-center' id='reveal'>JwG</h1>
             </div>
         </div>
         <div class='container' style='margin-top:5%;'>
             <div class='row'>
-                <div class='col-md-3'>
-                    <ul>
-                        <li>
-                        <i class='fa fa-book'></i><a href='education.html'>Education</a>
-                        </li>
-                        <li>
-                        <i class='fa fa-group'></i><a href='community.html'>Community</a>
-                        </li>
-                        <li>
-                        <i class="fa fa-github"></i><a href='#'>GitHub</a>
-                        </li>
-                        <li>
-                        <i class="fa fa-linkedin"></i><a href='#'>LinkedIn</a>
-                        </li>
-
-                        <li>
-                        <i class="fa fa-twitter"></i><a href='#'>Twitter</a>
-                        </li>
-                    </ul>
+                <!-- big screen -->
+                <div class='col-md-2' id='hide'>
+                    <p><i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a></p>
+                    <p><i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a></p>
+                    <p><i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a></p>
+                    <p><i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a></p>
                 </div>
-                <div class='col-md-8'>
-                    <p>
-                    I am Jonathan Goodwin, an Information Science Major at <a href='http://www.ccs.neu.edu/'>Northeastern University</a> currently on <a href='http://www.ccs.neu.edu/co-op/'>Co-op</a> at <a href='http://www.dataxu.com/'>DataXu</a>. <br>
-                    Some of my favorite things are: automation, operations, great food and electronic music.
-                    </p>
+                <div class='col-md-4' id='hide'>
+                    <img src='Image_Avatar.png' class='img-responsive' style='-webkit-transform: scaleX(-1); height: 519px;'>
                 </div>
+                <!-- end big screen -->
+                <div class='col-xs nav text-center' id='reveal'>
+                    <span style='display: inline-block;'>
+                        <i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a>
+                        <i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a>
+                    </span>
+                    <span style='display: inline-block;'>
+                    <i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a>
+                    <i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a>
+                    </span>
+                </div>
+                <div id='content' class='col-xs'></div>
             </div>
+            <img src='Image_Avatar.png' class='img-responsive' id='reveal' style='-webkit-transform: scaleX(-1); height: 519px; margin-left:auto; margin-right:auto; margin-bottom: 3%; margin-top:3%;'>
         </div>
-        <p class='credit'>Icons used <a href='http://fontawesome.io'>http://fontawesome.io</a> Styles used <a href='http://getbootstrap.com'>http://getbootstrap.com</a></p>
     </body>
+    <!-- Icons used: http://fontawesome.io   Styles used: http://getbootstrap.com -->
 </html>
