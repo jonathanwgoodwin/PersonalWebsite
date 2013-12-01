@@ -1,16 +1,14 @@
-p {
-    font-size 20px;
-}
 li {
     font-size: 20px;
 }
 body {
     background-color: white;
+    font-size: 20px;
 }
-h1 {
-    // color: #686868;
+.header {
     font-size: 50px;
     font-family: 'Orbitron', sans-serif;
+    margin-bottom: 5%;
 }
 .fa {
     margin-right: 6px;
@@ -19,16 +17,24 @@ h1 {
     margin-right: 5px;
     margin-left: 20px;
 }
-.social {
-    font-size: 20px;
-}
 img {
     margin-right: 15px;
+    -webkit-transform: scaleX(-1);
+    height: 519px;
+}
+.mobile {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
 .nav {
     font-size: 20px;
     margin-left: 15px;
     margin-bottom: 10px;
+}
+.nav span {
+    display: inline-block;
 }
 #reveal {
     display: none;

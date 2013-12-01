@@ -19,37 +19,39 @@
     </head>
     <body>
         <div class='container'>
-            <div>
-                <h1 class='col-md-3' id='hide'>JwG</h1>
-                <h1 class='col-xs text-center' id='reveal'>JwG</h1>
-            </div>
+            <h1 class='col-md-3 header' id='hide'>JwG</h1>
+            <h1 class='col-xs header text-center' id='reveal'>JwG</h1>
         </div>
-        <div class='container' style='margin-top:5%;'>
+        <div class='container'>
             <div class='row'>
+
                 <!-- big screen -->
-                <div class='col-md-2' id='hide'>
-                    <p><i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a></p>
-                    <p><i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a></p>
-                    <p><i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a></p>
-                    <p><i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a></p>
+                <div class='col-md-2 nav' id='hide'>
+                    <span><i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a></span>
+                    <span><i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a></span>
+                    <span><i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a></span>
+                    <span><i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a></span>
                 </div>
                 <div class='col-md-4' id='hide'>
-                    <img src='Image_Avatar.png' class='img-responsive' style='-webkit-transform: scaleX(-1); height: 519px;'>
+                    <img src='Image_Avatar.png' class='img-responsive'>
                 </div>
                 <!-- end big screen -->
+
                 <div class='col-xs nav text-center' id='reveal'>
-                    <span style='display: inline-block;'>
+                    <span>
                         <i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a>
                         <i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a>
                     </span>
-                    <span style='display: inline-block;'>
-                    <i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a>
-                    <i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a>
+                    <span>
+                        <i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a>
+                        <i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a>
                     </span>
                 </div>
                 <div id='content' class='col-xs'></div>
             </div>
-            <img src='Image_Avatar.png' class='img-responsive' id='reveal' style='-webkit-transform: scaleX(-1); height: 519px; margin-left:auto; margin-right:auto; margin-bottom: 3%; margin-top:3%;'>
+            <div class='mobile'>
+                <img src='Image_Avatar.png' id='reveal' class='mobile'>
+            </div>
         </div>
     </body>
     <!-- Icons used: http://fontawesome.io   Styles used: http://getbootstrap.com -->
