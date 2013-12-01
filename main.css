@@ -1,0 +1,54 @@
+p {
+    font-size: 20px;
+        }
+        li {
+            font-size: 20px;
+        }
+        body {
+            background-color: white;
+        }
+        h1 {
+            // color: #686868;
+            font-size: 50px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .fa {
+            margin-right: 6px;
+        }
+        .social .fa {
+            margin-right: 5px;
+            margin-left: 20px;
+        }
+        .credit {
+            font-size: 13px;
+            position: absolute;
+            margin-left: 40%;
+            bottom: 0px;
+        }
+        .social {
+            font-size: 20px;
+        }
+        img {
+            margin-right: 15px;
+        }
+        .nav {
+            font-size: 20px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+        #reveal {
+            display: none;
+        }
+        @media only screen and (max-width: 1175px) {
+            #hide{
+                display: none;
+            }
+            #reveal{
+                display: block;
+            }
+        }
+        #content{
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
