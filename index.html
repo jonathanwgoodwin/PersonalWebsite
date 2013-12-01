@@ -8,95 +8,17 @@
         <script src='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js'></script>
         <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
         <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css'>
-        <!-- links -->
-        <link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,700' rel='stylesheet' type='text/css'>
-        <!-- jwg -->
+        <!-- jwg font -->
         <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900' rel='stylesheet' type='text/css'>
         <!-- fontawesome -->
         <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
-        <style>
-            p {
-                font-size: 20px;
-            }
-            li {
-                font-size: 20px;
-            }
-
-            a {
-                font-family: Signika Negative;
-            }
-            body {
-                background-color: white;
-            }
-            h1 {
-                // color: #686868;
-                font-size: 50px;
-                font-family: 'Orbitron', sans-serif;
-            }
-            .fa {
-                margin-right: 6px;
-            }
-            .social .fa {
-                margin-right: 5px;
-                margin-left: 20px;
-            }
-            .credit {
-                font-size: 13px;
-                position: absolute;
-                margin-left: 40%;
-                bottom: 0px;
-            }
-            .social {
-                font-size: 20px;
-            }
-            img {
-                margin-right: 15px;
-            }
-            .nav {
-                font-size: 20px;
-                margin-left: 15px;
-                margin-bottom: 10px;
-            }
-            #reveal {
-                display: none;
-            }
-            @media only screen and (max-width: 1175px) {
-                #hide{
-                    display: none;
-                }
-                #reveal{
-                    display: block;
-                }
-            }
-            #content{
-                margin-left: 30px;
-                margin-right: 30px;
-            }
-        </style>
-        <script>
-            function getContent(){
-                loc=window.location.href.split('/').pop().replace('\#','');
-                console.log(loc);
-                if(loc == ''){
-                    loc='home';
-                }
-                if(loc == 'home'){
-                    getHtml('home');
-                    }else{
-                    getHtml(loc);
-                }
-            }
-            function getHtml(file){
-                $.get( file, function( data ) {
-                    $( "#content" ).html( data );
-                });
-            }
-            $(document).ready(getContent());
-        </script>
-
+        <!-- my js -->
+        <script src='main.js'></script>
+        <!-- my styling -->
+        <link rel='stylesheet' href='./main.css'>
     </head>
     <body>
-        <div class='container' >
+        <div class='container'>
             <div>
                 <h1 class='col-md-3' id='hide'>JwG</h1>
                 <h1 class='col-xs text-center' id='reveal'>JwG</h1>
