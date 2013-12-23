@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- google jquery -->
@@ -24,33 +24,26 @@
         </div>
         <div class='container'>
             <div class='row'>
-
-                <!-- big screen -->
-                <div class='col-md-2 nav' id='hide'>
+                <!-- col-xs-12 is for small devices col-md-2 is for medium -->
+                <div class='col-xs col-md-2 nav text-center' id='hide_nav'>
+                    <span><i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a></span>
+                    <span><i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a></span>
+                    <span><i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a></span>
+                    <span><i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a></span>
+                </div>
+                <div class='col-xs col-md-2 nav' id='hide'>
                     <span><i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a></span>
                     <span><i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a></span>
                     <span><i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a></span>
                     <span><i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a></span>
                 </div>
                 <div class='col-md-4' id='hide'>
-                    <img src='Image_Avatar.png' class='img-responsive'>
-                </div>
-                <!-- end big screen -->
-
-                <div class='col-xs nav text-center' id='reveal'>
-                    <span>
-                        <i class='fa fa-home'></i><a onclick='getHtml("home")' href='#home'>Home</a>
-                        <i class='fa fa-book'></i><a onclick='getHtml("education")' href='#education'>Education</a>
-                    </span>
-                    <span>
-                        <i class='fa fa-group'></i><a onclick='getHtml("community")' href='#community'>Community</a>
-                        <i class='fa fa-desktop'></i><a onclick='getHtml("work")' href='#work'>Work</a>
-                    </span>
+                   <img src='Image_Avatar.png' class='img-responsive'>
                 </div>
                 <div id='content' class='col-xs'></div>
             </div>
             <div class='mobile'>
-                <img src='Image_Avatar.png' id='reveal' class='mobile'>
+               <img src='Image_Avatar.png' id='reveal' class='mobile'>
             </div>
         </div>
     </body>
