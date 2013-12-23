@@ -17,7 +17,6 @@
             src=/files/jwg.conf
 
     - name: install site to machine
-      git
-      - git: repo=https://github.com/jonathanwgoodwin/PersonalWebsite.gt
-             dest=/root/sites/jwg
-             version=master
+      git: repo=https://github.com/jonathanwgoodwin/PersonalWebsite.gt
+           dest=/root/sites/jwg
+           version=master
